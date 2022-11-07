@@ -144,6 +144,7 @@ body {
   display: flex;
   width: 254px;
   justify-content: space-between;
+  position: relative;
 }
 
 .nav-menu::before {
@@ -157,6 +158,27 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+
+.navigation-button-active {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  position: relative;
+}
+
+.navigation-button-active::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  background-color: var(--brand-color);
+  left: 0px;
+  top: 46px;
+  border-radius: 2px;
 }
 
 .nav-contact {
@@ -190,13 +212,16 @@ body {
   border: 1px solid var(--border-color);
 }
 
-.navigation-button:visited {
+.navigation-button:visited,
+.navigation-button-active:visited {
   color: inherit;
 }
 
 .navigation-button:hover,
 .header-address:hover,
+.navigation-button-active:hover,
 .navigation-button:focus,
+.navigation-button-active:focus,
 .header-address:focus,
 .header-address:hover .icon-color,
 .header-address:focus .icon-color {
