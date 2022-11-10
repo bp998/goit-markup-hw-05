@@ -340,13 +340,14 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.1);
   cursor: alias;
-  transition-property: transform;
+  transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
 }
 
 .is-hidden {
-  transform: scale(0);
+  opacity: 0;
+  z-index: -1;
 }
 
 .modal {
@@ -370,8 +371,8 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.1);
   right: 8px;
   top: 8px;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   border-radius: 50px;
   background-color: white;
 }
@@ -620,6 +621,29 @@ body {
   padding-bottom: 30px;
 }
 
+.box-hover-text-portfolio {
+  font-size: 18px;
+  line-height: 156%;
+  letter-spacing: 0.03em;
+  padding: 24px;
+  color: white;
+}
+
+.box-overlay {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 294px;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  overflow: hidden;
+}
+
+.box-picture {
+  overflow: hidden;
+  height: 294px;
+}
+
 .box-styling-portfolio {
   margin: 0;
   border: 1px solid #eeeeee;
@@ -627,9 +651,14 @@ body {
   flex-direction: column;
   height: 404px;
   width: 370px;
+  position: relative;
 }
 
-.box-styling-portfolio:hover {
+.box-styling-portfolio:hover,
+.box-styling-portfolio:hover .box-overlay {
+  transform: translateY(0%);
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
   cursor: pointer;
@@ -639,7 +668,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 322px;
-  height: 70px;
+  height: 110px;
   margin: 0 auto;
   padding-block: 20px;
 }
