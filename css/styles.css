@@ -100,10 +100,14 @@ body {
 }
 
 .icon-color {
-  --color2: var(--border-grey);
-  --color5: var(--border-grey);
-  --color3: var(--border-grey);
-  --color4: var(--border-grey);
+  color: var(--border-grey);
+  --color2: currentColor;
+  --color5: currentColor;
+  --color3: currentColor;
+  --color4: currentColor;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: --color2, --color3, --color5, --color4;
 }
 
 .icon-color:hover {
@@ -115,8 +119,9 @@ body {
 }
 
 .icon-social {
-  --color3: var(--border-grey);
-  --color4: var(--border-grey);
+  color: var(--border-grey);
+  --color3: currentColor;
+  --color4: currentColor;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -125,6 +130,9 @@ body {
   height: 44px;
   margin: 0 auto;
   border-radius: 50%;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: --color3, --color4, background-color, color;
 }
 
 .icon-social:hover {
@@ -158,6 +166,9 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: --color2, color, --color5, box-shadow;
 }
 
 .navigation-button-active {
@@ -168,6 +179,9 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   position: relative;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: --color2, color, --color5, box-shadow;
 }
 
 .navigation-button-active::after {
@@ -195,17 +209,26 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   position: relative;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: --color2, color, --color5, box-shadow;
 }
 
 .icon-mail {
   position: absolute;
   left: -20.5px;
   top: 1.5px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: --color2, color, --color5;
 }
 
 .icon-tel {
   position: absolute;
   left: -15px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: --color2, color, --color5;
 }
 
 .header-border {
@@ -310,6 +333,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: --color3, --color4, background-color;
 }
 
 .icon-social-footer:hover {
@@ -586,6 +612,9 @@ body {
   border-radius: 4px;
   padding-inline: 1.5rem;
   padding-block: 0.5rem;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: background-color, box-shadow;
 }
 
 .button:hover,
@@ -655,13 +684,14 @@ body {
   flex-direction: column;
   height: 404px;
   width: 370px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: transform, box-shadow;
 }
 
 .box-styling-portfolio:hover,
 .box-styling-portfolio:hover .box-overlay {
   transform: translateY(0%);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
   cursor: pointer;
