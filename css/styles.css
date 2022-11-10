@@ -100,28 +100,19 @@ body {
 }
 
 .icon-color {
-  color: var(--border-grey);
-  --color2: currentColor;
-  --color5: currentColor;
-  --color3: currentColor;
-  --color4: currentColor;
+  fill: var(--border-grey);
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: --color2, --color3, --color5, --color4;
+  transition-property: fill;
 }
 
 .icon-color:hover {
-  --color2: var(--brand-color);
-  --color5: var(--brand-color);
-  --color3: var(--brand-color);
-  --color4: var(--brand-color);
+  fill: var(--brand-color);
   cursor: pointer;
 }
 
 .icon-social {
-  color: var(--border-grey);
-  --color3: currentColor;
-  --color4: currentColor;
+  fill: var(--border-grey);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -132,13 +123,12 @@ body {
   border-radius: 50%;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: --color3, --color4, background-color, color;
+  transition-property: fill, background-color, color;
 }
 
 .icon-social:hover {
   background-color: var(--brand-color);
-  --color3: var(--white-color);
-  --color4: var(--white-color);
+  fill: var(--white-color);
   cursor: pointer;
 }
 
@@ -153,10 +143,6 @@ body {
   width: 254px;
   justify-content: space-between;
   position: relative;
-}
-
-.nav-menu::before {
-  content: icon;
 }
 
 .navigation-button {
@@ -220,7 +206,7 @@ body {
   top: 1.5px;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: --color2, color, --color5;
+  transition-property: fill;
 }
 
 .icon-tel {
@@ -228,7 +214,7 @@ body {
   left: -15px;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: --color2, color, --color5;
+  transition-property: fill;
 }
 
 .header-border {
@@ -249,9 +235,8 @@ body {
 .header-address:hover .icon-color,
 .header-address:focus .icon-color {
   color: var(--brand-color);
+  fill: var(--brand-color);
   outline: none;
-  --color2: var(--brand-color);
-  --color5: var(--brand-color);
 }
 
 /*=*/
@@ -328,20 +313,17 @@ body {
   height: 44px;
   margin: 0 auto;
   border-radius: 50%;
-  --color3: var(--border-grey);
-  --color4: var(--border-grey);
+  fill: white;
   display: flex;
   justify-content: center;
   align-items: center;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: --color3, --color4, background-color;
+  transition-property: fill, background-color;
 }
 
 .icon-social-footer:hover {
   background-color: var(--brand-color);
-  --color3: var(--white-color);
-  --color4: var(--white-color);
   cursor: pointer;
 }
 
@@ -577,6 +559,9 @@ body {
   height: 92px;
   border: 1px solid var(--border-grey);
   border-radius: 4px;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: border-color;
 }
 
 .box-styling-main-bottom:hover {
