@@ -655,7 +655,6 @@ body {
   flex-direction: column;
   height: 404px;
   width: 370px;
-  position: relative;
 }
 
 .box-styling-portfolio:hover,
