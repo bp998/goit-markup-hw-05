@@ -66,6 +66,47 @@ a {
 /* ================== UNIVERSAL =================================================== */
 /* ================================================================================*/
 
+.backdrop {
+  display: flex;
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: alias;
+  transition-property: opacity, z-index;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+
+.is-hidden {
+  opacity: 0;
+  z-index: -1;
+}
+
+.modal {
+  margin: auto;
+  cursor: default;
+  background-color: white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  width: 528px;
+  height: 581px;
+  position: relative;
+}
+
+.modal-button {
+  position: absolute;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  right: 8px;
+  top: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  background-color: white;
+}
+
 .wrapper-social {
   margin: 0;
   display: flex;
@@ -318,52 +359,6 @@ a {
 /* ====================================================================*/
 /* ========== INDEX.HTML PAGE ==========================================*/
 /* =============================================================== */
-
-.backdrop {
-  display: flex;
-  z-index: 2;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
-  cursor: alias;
-  transition-property: opacity, z-index;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 250ms;
-}
-
-.is-hidden {
-  opacity: 0;
-  z-index: -1;
-}
-
-.modal {
-  flex-direction: column;
-  padding: 8px;
-  margin: auto;
-  cursor: default;
-  background-color: white;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  width: 528px;
-  height: 581px;
-  position: relative;
-}
-
-.modal-button {
-  position: absolute;
-  padding: 0;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  right: 8px;
-  top: 8px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50px;
-  background-color: white;
-}
 
 .central-text {
   font-weight: 900;
