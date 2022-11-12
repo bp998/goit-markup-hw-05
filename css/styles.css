@@ -12,17 +12,48 @@
 }
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: "Roboto", sans-serif;
-  font-style: normal;
   color: rgba(33, 33, 33, 1);
   background-color: var(--white-color);
+  font-size: 14px;
+  letter-spacing: 0.03em;
 }
 
-/* ============================ */
-/* ========== UNIVERSAL, HEADER AND FOOTER STYLING */
-/* ============================ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+address {
+  font-style: normal;
+}
+
+button {
+  display: block;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
 
 /*=*/
 /*=*/
@@ -55,21 +86,14 @@ body {
   height: 252px;
 }
 
-.list-styling {
-  list-style: none;
-  padding-left: 0;
-}
-
 .container {
   margin: 0 auto;
-  width: 100%;
-  max-width: 1200px;
+  width: 1200px;
   padding: 0 15px;
 }
 
 .section {
-  padding-bottom: 94px;
-  padding-top: 94px;
+  padding-block: 94px;
 }
 
 /*=*/
@@ -86,8 +110,7 @@ body {
 .header-position {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding-block: 15px;
+  padding-block: 24px;
 }
 
 .webstudio-top {
@@ -96,14 +119,10 @@ body {
   color: var(--second-brand-color);
   font-size: 26px;
   line-height: 1.19;
-  letter-spacing: 0.03em;
 }
 
 .icon-color {
-  fill: var(--border-grey);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: fill;
+  fill: currentColor;
 }
 
 .icon-color:hover {
@@ -133,15 +152,12 @@ body {
 }
 
 .nav-position {
-  flex-grow: 1;
-  justify-self: flex-start;
-  padding-left: 93px;
+  margin-left: 93px;
 }
 
 .nav-menu {
   display: flex;
-  width: 254px;
-  justify-content: space-between;
+  gap: 50px;
   position: relative;
 }
 
@@ -149,25 +165,23 @@ body {
   color: inherit;
   text-decoration: none;
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: --color2, color, --color5, box-shadow;
+  transition-property: color;
 }
 
 .navigation-button-active {
   color: inherit;
   text-decoration: none;
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   position: relative;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: --color2, color, --color5, box-shadow;
+  transition-property: color;
 }
 
 .navigation-button-active::after {
@@ -184,59 +198,52 @@ body {
 .nav-contact {
   display: flex;
   gap: 50px;
-  padding-left: 0px;
+  margin-left: auto;
 }
 
 .header-address {
   text-decoration: none;
   color: var(--link-color);
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   position: relative;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: --color2, color, --color5, box-shadow;
+  transition-property: color;
 }
 
 .icon-mail {
   position: absolute;
   left: -20.5px;
   top: 1.5px;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: fill;
 }
 
 .icon-tel {
   position: absolute;
   left: -15px;
+  bottom: 1px;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: fill;
 }
 
 .header-border {
-  border: 1px solid var(--border-color);
-}
-
-.navigation-button:visited,
-.navigation-button-active:visited {
-  color: inherit;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .navigation-button:hover,
-.header-address:hover,
-.navigation-button-active:hover,
 .navigation-button:focus,
+.navigation-button-active:hover,
 .navigation-button-active:focus,
-.header-address:focus,
+.header-address:hover,
+.header-address:focus {
+  color: var(--brand-color);
+}
+
 .header-address:hover .icon-color,
 .header-address:focus .icon-color {
-  color: var(--brand-color);
   fill: var(--brand-color);
-  outline: none;
 }
 
 /*=*/
@@ -255,7 +262,6 @@ body {
   color: var(--white-color);
   font-size: 26px;
   line-height: 1.19;
-  letter-spacing: 0.03em;
 }
 
 .webstudio-bottom-position {
@@ -267,9 +273,7 @@ body {
 .footer-address {
   color: var(--white-color);
   font-style: inherit;
-  font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0.03em;
   margin: 0;
 }
 
@@ -282,9 +286,7 @@ body {
 }
 
 .address-styling {
-  font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0.03em;
   color: var(--second-link-color);
 }
 
@@ -301,9 +303,7 @@ body {
   margin: 0;
   padding-bottom: 20px;
   color: var(--white-color);
-  font-size: 14px;
   line-height: 16px;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 
@@ -348,7 +348,7 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.1);
   cursor: alias;
-  transition-property: opacity;
+  transition-property: opacity, z-index;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
 }
@@ -374,7 +374,6 @@ body {
 
 .modal-button {
   position: absolute;
-  cursor: pointer;
   padding: 0;
   border: 1px solid rgba(0, 0, 0, 0.1);
   right: 8px;
@@ -393,63 +392,42 @@ body {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-color);
+  width: 696px;
+  margin: 0 auto;
+  margin-bottom: 30px;
 }
 
 .main-header-background {
-  background-image: url(../images/main-header-background.jpg);
+  background-image: linear-gradient(to bottom, var(--shadow), var(--shadow)),
+    url(../images/main-header-background.jpg);
   background-size: cover;
-}
-
-.shadow {
-  background-image: linear-gradient(to bottom, var(--shadow), var(--shadow));
-}
-
-.main-text-position {
-  height: 120px;
-  width: 700px;
-  flex-wrap: wrap;
-}
-
-.central-text-position {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-block: 200px;
+  padding: 200px 0;
+  max-width: 1600px;
+  margin: 0 auto;
+  height: 600px;
+  text-align: center;
 }
 
 .main-page-button {
   background-color: var(--brand-color);
   color: var(--white-color);
-  border: none;
-  border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.06em;
 }
 
-.main-page-button:hover,
-.main-page-button:focus {
-  cursor: pointer;
-}
-
 .main-button-position {
-  padding-top: 30px;
   width: 200px;
   height: 50px;
-  text-align: center;
-  padding: 0;
+  margin: auto;
 }
 
 .lorem-section {
   display: flex;
   gap: 30px;
-  padding: 0px;
-  margin-top: 94px;
+  padding-top: 94px;
 }
 
 .lorem-object {
@@ -461,16 +439,12 @@ body {
 }
 
 .lorem-topic {
-  font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 
 .lorem-text {
-  font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0.03em;
   color: var(--link-color);
 }
 
@@ -487,9 +461,7 @@ body {
 .image-description {
   padding: 12px;
   font-weight: 700;
-  font-size: 14px;
   line-height: 16px;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
   text-align: center;
   color: var(--white-color);
@@ -504,7 +476,6 @@ body {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
-  letter-spacing: 0.03em;
   margin: 0;
   padding-bottom: 50px;
 }
@@ -532,7 +503,6 @@ body {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
-  letter-spacing: 0.03em;
   color: var(--main-page-text-header-color);
 }
 
@@ -540,7 +510,6 @@ body {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
-  letter-spacing: 0.03em;
   color: var(--link-color);
 }
 
@@ -638,7 +607,6 @@ body {
 .box-hover-text-portfolio {
   font-size: 18px;
   line-height: 1.56;
-  letter-spacing: 0.03em;
   padding: 24px;
   color: var(--white-color);
 }
@@ -703,7 +671,6 @@ body {
 .portfolio-image-subtitle {
   font-size: 16px;
   line-height: 1.88;
-  letter-spacing: 0.03em;
   color: var(--link-color);
   margin: 0;
 }
