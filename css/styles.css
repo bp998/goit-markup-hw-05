@@ -77,10 +77,6 @@ a {
   color: var(--brand-color);
 }
 
-.decoration-none {
-  text-decoration: none;
-}
-
 .background-block {
   background-color: var(--second-background);
   height: 252px;
@@ -119,15 +115,6 @@ a {
   color: var(--second-brand-color);
   font-size: 26px;
   line-height: 1.19;
-}
-
-.icon-color {
-  fill: currentColor;
-}
-
-.icon-color:hover {
-  fill: var(--brand-color);
-  cursor: pointer;
 }
 
 .icon-social {
@@ -214,18 +201,17 @@ a {
 }
 
 .icon-mail {
+  fill: currentColor;
   position: absolute;
   left: -20.5px;
   top: 1.5px;
 }
 
 .icon-tel {
+  fill: currentColor;
   position: absolute;
   left: -15px;
   bottom: 1px;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: fill;
 }
 
 .header-border {
@@ -239,11 +225,6 @@ a {
 .header-address:hover,
 .header-address:focus {
   color: var(--brand-color);
-}
-
-.header-address:hover .icon-color,
-.header-address:focus .icon-color {
-  fill: var(--brand-color);
 }
 
 /*=*/
@@ -441,6 +422,7 @@ a {
 .lorem-topic {
   line-height: 1.14;
   text-transform: uppercase;
+  padding-bottom: 10px;
 }
 
 .lorem-text {
@@ -450,8 +432,7 @@ a {
 
 .main-page-middle {
   display: flex;
-  gap: 2.5%;
-  padding: 0;
+  gap: 30px;
 }
 
 .main-image-position {
@@ -459,13 +440,13 @@ a {
 }
 
 .image-description {
-  padding: 12px;
+  padding-block: 27px;
   font-weight: 700;
   line-height: 16px;
   text-transform: uppercase;
   text-align: center;
   color: var(--white-color);
-  bottom: 4px;
+  bottom: 0px;
   position: absolute;
   width: 100%;
   height: 70px;
@@ -498,12 +479,26 @@ a {
   justify-content: center;
 }
 
+.customer-icon {
+  fill: var(--border-grey);
+  cursor: pointer;
+  transition-property: fill;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 250ms;
+}
+
+.customer-icon:hover {
+  fill: var(--brand-color);
+}
+
 .team-member-name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
   color: var(--main-page-text-header-color);
+  padding-top: 30px;
+  padding-bottom: 10px;
 }
 
 .team-member-position {
@@ -511,6 +506,7 @@ a {
   line-height: 1.19;
   text-align: center;
   color: var(--link-color);
+  padding-bottom: 16px;
 }
 
 .box-styling-main {
@@ -556,30 +552,25 @@ a {
   justify-content: center;
 }
 
-.button {
+.portfolio-filter-button {
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   background-color: var(--button-color);
-  border: none;
-  border-radius: 4px;
   padding-inline: 1.5rem;
   padding-block: 0.5rem;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: background-color, box-shadow;
+  transition-property: color, background-color, box-shadow;
 }
 
-.button:hover,
-.button:focus {
+.portfolio-filter-button:hover,
+.portfolio-filter-button:focus {
   color: var(--white-color);
   background-color: var(--brand-color);
-  cursor: pointer;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  border: none;
-  outline: none;
 }
 
 .portfolio-button-position {
@@ -594,7 +585,6 @@ a {
 .portfolio-image-position {
   display: flex;
   margin: 0;
-  padding-left: 0;
   justify-content: center;
   flex-wrap: wrap;
   column-gap: 30px;
