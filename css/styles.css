@@ -1,6 +1,7 @@
 :root {
   --white-color: rgba(255, 255, 255, 1);
   --link-color: rgba(117, 117, 117, 1);
+  --black-text: rgba(33, 33, 33, 1);
   --brand-color: rgba(33, 150, 243, 1);
   --second-brand-color: rgba(0, 0, 0, 1);
   --second-background: rgba(47, 48, 58, 1);
@@ -120,7 +121,7 @@ a {
 
 .background-block {
   background-color: var(--second-background);
-  height: 252px;
+  padding-block: 60px;
 }
 
 .container {
@@ -170,13 +171,12 @@ a {
   border-radius: 50%;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: fill, background-color, color;
+  transition-property: fill, background-color;
 }
 
 .icon-social:hover {
   background-color: var(--brand-color);
   fill: var(--white-color);
-  cursor: pointer;
 }
 
 .nav-position {
@@ -230,6 +230,8 @@ a {
 }
 
 .header-address {
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: var(--link-color);
   font-weight: 500;
@@ -243,16 +245,12 @@ a {
 
 .icon-mail {
   fill: currentColor;
-  position: absolute;
-  left: -20.5px;
-  top: 1.5px;
+  margin-right: 10px;
 }
 
 .icon-tel {
   fill: currentColor;
-  position: absolute;
-  left: -15px;
-  bottom: 1px;
+  margin-right: 10px;
 }
 
 .header-border {
@@ -287,9 +285,7 @@ a {
 }
 
 .webstudio-bottom-position {
-  padding-top: 60px;
-  padding-bottom: 20px;
-  margin: 0;
+  margin-bottom: 20px;
 }
 
 .footer-address {
@@ -314,16 +310,16 @@ a {
 
 .footer-wrapper {
   display: flex;
+  align-items: baseline;
 }
 
 .footer-social {
-  padding-top: 72px;
-  padding-left: 70px;
+  margin-left: 70px;
 }
 
 .footer-social-header {
-  margin: 0;
-  padding-bottom: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
   color: var(--white-color);
   line-height: 16px;
   text-transform: uppercase;
@@ -435,17 +431,18 @@ a {
 }
 
 .image-description {
-  padding-block: 27px;
   font-weight: 700;
-  line-height: 16px;
+  line-height: 1.14;
   text-transform: uppercase;
-  text-align: center;
   color: var(--white-color);
   bottom: 0px;
   position: absolute;
   width: 100%;
   height: 70px;
   background: rgba(47, 48, 58, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main-page-header {
@@ -453,7 +450,7 @@ a {
   line-height: 1.17;
   text-align: center;
   margin: 0;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .main-page-team {
@@ -475,15 +472,8 @@ a {
 }
 
 .customer-icon {
-  fill: var(--border-grey);
+  fill: currentColor;
   cursor: pointer;
-  transition-property: fill;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 250ms;
-}
-
-.customer-icon:hover {
-  fill: var(--brand-color);
 }
 
 .team-member-name {
@@ -515,17 +505,18 @@ a {
 }
 
 .box-styling-main-bottom {
+  color: var(--border-grey);
   width: 170px;
   height: 92px;
-  border: 1px solid var(--border-grey);
+  border: 1px solid currentColor;
   border-radius: 4px;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-property: border-color;
+  transition-property: color;
 }
 
 .box-styling-main-bottom:hover {
-  border-color: var(--brand-color);
+  color: var(--brand-color);
 }
 
 .main-bottom-section {
@@ -552,6 +543,7 @@ a {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
+  letter-spacing: 0.03em;
   background-color: var(--button-color);
   padding-inline: 1.5rem;
   padding-block: 0.5rem;
@@ -616,40 +608,36 @@ a {
 }
 
 .box-styling-portfolio {
-  margin: 0;
-  border: 1px solid #eeeeee;
-  display: flex;
-  flex-direction: column;
-  height: 404px;
+  display: block;
   width: 370px;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-property: transform, box-shadow;
 }
 
-.box-styling-portfolio:hover,
+.box-styling-portfolio:focus .box-overlay,
 .box-styling-portfolio:hover .box-overlay {
   transform: translateY(0%);
+}
+
+.box-styling-portfolio:hover,
+.box-styling-portfolio:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .text-styling-portfolio {
-  display: flex;
-  flex-direction: column;
-  width: 322px;
-  height: 110px;
-  margin: 0 auto;
-  padding-block: 20px;
+  border: 1px solid #eeeeee;
+  padding: 20px 24px;
 }
 
 .portfolio-image-header {
+  color: var(--black-text);
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-  margin: 0;
   justify-items: center;
-  padding-bottom: 4px;
+  margin-bottom: 4px;
 }
 
 .portfolio-image-subtitle {
